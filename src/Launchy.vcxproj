@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9E076208-BC0C-3CC7-BB54-39BF39FE8B00}</ProjectGuid>
+    <RootNamespace>Launchy</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <OutputDirectory>..\release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\</IntermediateDirectory>
+    <PrimaryOutput>Launchy</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <OutputDirectory>..\debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\</IntermediateDirectory>
+    <PrimaryOutput>Launchy</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Launchy</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Launchy</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\launchy\src;.;..\launchy\common;..\..\..\Programs\boost;..\..\..\Qt\5.9.2\msvc2017_64\include;..\..\..\Qt\5.9.2\msvc2017_64\include\QtWidgets;..\..\..\Qt\5.9.2\msvc2017_64\include\QtWinExtras;..\..\..\Qt\5.9.2\msvc2017_64\include\QtGui;..\..\..\Qt\5.9.2\msvc2017_64\include\QtANGLE;..\..\..\Qt\5.9.2\msvc2017_64\include\QtNetwork;..\..\..\Qt\5.9.2\msvc2017_64\include\QtCore;build;.;..\..\..\Qt\5.9.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>build\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>..\launchy\src\precompiled.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ObjectFileName>build\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>..\launchy\src\precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)\Launchy.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_WINDOWS;VC_EXTRALEAN;WIN32;_UNICODE;UNICODE;WINVER=0x0600;_WIN32_WINNT=0x0600;_WIN32_WINDOWS=0x0600;_WIN32_IE=0x0700;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>C:\Qt\5.9.2\msvc2017_64\lib\qtmain.lib;shell32.lib;shell32.lib;user32.lib;gdi32.lib;ole32.lib;comctl32.lib;advapi32.lib;userenv.lib;netapi32.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5Widgets.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5WinExtras.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5Gui.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5Network.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\5.9.2\msvc2017_64\lib;C:\utils\my_sql\my_sql\lib;C:\utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\Launchy.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;VC_EXTRALEAN;WIN32;_UNICODE;UNICODE;WINVER=0x0600;_WIN32_WINNT=0x0600;_WIN32_WINDOWS=0x0600;_WIN32_IE=0x0700;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\launchy\src;.;..\launchy\common;..\..\..\Programs\boost;..\..\..\Qt\5.9.2\msvc2017_64\include;..\..\..\Qt\5.9.2\msvc2017_64\include\QtWidgets;..\..\..\Qt\5.9.2\msvc2017_64\include\QtWinExtras;..\..\..\Qt\5.9.2\msvc2017_64\include\QtGui;..\..\..\Qt\5.9.2\msvc2017_64\include\QtANGLE;..\..\..\Qt\5.9.2\msvc2017_64\include\QtNetwork;..\..\..\Qt\5.9.2\msvc2017_64\include\QtCore;build;.;..\..\..\Qt\5.9.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>build\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>..\launchy\src\precompiled.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ObjectFileName>build\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>..\launchy\src\precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)\Launchy.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_CONSOLE;VC_EXTRALEAN;WIN32;_UNICODE;UNICODE;WINVER=0x0600;_WIN32_WINNT=0x0600;_WIN32_WINDOWS=0x0600;_WIN32_IE=0x0700;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shell32.lib;user32.lib;gdi32.lib;ole32.lib;comctl32.lib;advapi32.lib;userenv.lib;netapi32.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5Widgetsd.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5WinExtrasd.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5Guid.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5Networkd.lib;C:\Qt\5.9.2\msvc2017_64\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\5.9.2\msvc2017_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Launchy.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;VC_EXTRALEAN;WIN32;_UNICODE;UNICODE;WINVER=0x0600;_WIN32_WINNT=0x0600;_WIN32_WINDOWS=0x0600;_WIN32_IE=0x0700;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\launchy\src\AnimationLabel.cpp" />
+    <ClCompile Include="..\launchy\src\CharLineEdit.cpp" />
+    <ClCompile Include="..\launchy\src\CharListWidget.cpp" />
+    <ClCompile Include="..\launchy\src\CommandHistory.cpp" />
+    <ClCompile Include="..\launchy\common\DropListWidget.cpp" />
+    <ClCompile Include="..\launchy\src\Fader.cpp" />
+    <ClCompile Include="..\launchy\common\FileBrowser.cpp" />
+    <ClCompile Include="..\launchy\common\FileBrowserDelegate.cpp" />
+    <ClCompile Include="..\launchy\src\FileSearch.cpp" />
+    <ClCompile Include="..\launchy\src\InputDataList.cpp" />
+    <ClCompile Include="..\launchy\src\SettingsManager.cpp" />
+    <ClCompile Include="..\launchy\platforms\win\WinIconProvider.cpp" />
+    <ClCompile Include="..\launchy\src\catalog.cpp" />
+    <ClCompile Include="..\launchy\src\catalog_builder.cpp" />
+    <ClCompile Include="..\launchy\src\catalog_types.cpp" />
+    <ClCompile Include="..\launchy\src\globals.cpp" />
+    <ClCompile Include="..\launchy\src\icon_delegate.cpp" />
+    <ClCompile Include="..\launchy\src\icon_extractor.cpp" />
+    <ClCompile Include="..\launchy\src\main.cpp" />
+    <ClCompile Include="..\launchy\platforms\win\minidump.cpp" />
+    <ClCompile Include="..\launchy\src\options.cpp" />
+    <ClCompile Include="..\launchy\src\platform_base_hotkey.cpp" />
+    <ClCompile Include="..\launchy\platforms\win\platform_win.cpp" />
+    <ClCompile Include="..\launchy\platforms\win\platform_win_hotkey.cpp" />
+    <ClCompile Include="..\launchy\platforms\win\platform_win_util.cpp" />
+    <ClCompile Include="..\launchy\src\plugin_handler.cpp" />
+    <ClCompile Include="..\launchy\src\plugin_interface.cpp" />
+    <ClCompile Include="..\launchy\src\precompiled.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\launchy\src\AnimationLabel.h" />
+    <CustomBuild Include="..\launchy\src\CharLineEdit.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\CharLineEdit.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\CharLineEdit.h -o build\moc_CharLineEdit.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/CharLineEdit.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_CharLineEdit.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\CharLineEdit.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\CharLineEdit.h -o build\moc_CharLineEdit.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/CharLineEdit.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_CharLineEdit.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\launchy\src\CharListWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\CharListWidget.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\CharListWidget.h -o build\moc_CharListWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/CharListWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_CharListWidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\CharListWidget.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\CharListWidget.h -o build\moc_CharListWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/CharListWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_CharListWidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\launchy\src\CommandHistory.h" />
+    <CustomBuild Include="..\launchy\common\DropListWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\common\DropListWidget.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\common\DropListWidget.h -o build\moc_DropListWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/common/DropListWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_DropListWidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\common\DropListWidget.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\common\DropListWidget.h -o build\moc_DropListWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/common/DropListWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_DropListWidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\launchy\src\Fader.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\Fader.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\Fader.h -o build\moc_Fader.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/Fader.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_Fader.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\Fader.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\Fader.h -o build\moc_Fader.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/Fader.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_Fader.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\launchy\common\FileBrowser.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\common\FileBrowser.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\common\FileBrowser.h -o build\moc_FileBrowser.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/common/FileBrowser.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_FileBrowser.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\common\FileBrowser.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\common\FileBrowser.h -o build\moc_FileBrowser.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/common/FileBrowser.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_FileBrowser.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\launchy\common\FileBrowserDelegate.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\common\FileBrowserDelegate.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\common\FileBrowserDelegate.h -o build\moc_FileBrowserDelegate.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/common/FileBrowserDelegate.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_FileBrowserDelegate.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\common\FileBrowserDelegate.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\common\FileBrowserDelegate.h -o build\moc_FileBrowserDelegate.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/common/FileBrowserDelegate.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_FileBrowserDelegate.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\launchy\src\FileSearch.h" />
+    <ClInclude Include="..\launchy\src\InputDataList.h" />
+    <ClInclude Include="..\launchy\src\SettingsManager.h" />
+    <ClInclude Include="..\launchy\platforms\win\WinIconProvider.h" />
+    <ClInclude Include="..\launchy\src\catalog.h" />
+    <CustomBuild Include="..\launchy\src\catalog_builder.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\catalog_builder.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\catalog_builder.h -o build\moc_catalog_builder.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/catalog_builder.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_catalog_builder.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\catalog_builder.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\catalog_builder.h -o build\moc_catalog_builder.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/catalog_builder.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_catalog_builder.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\launchy\src\catalog_types.h" />
+    <ClInclude Include="..\launchy\src\globals.h" />
+    <CustomBuild Include="..\launchy\src\icon_delegate.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\icon_delegate.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\icon_delegate.h -o build\moc_icon_delegate.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/icon_delegate.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_icon_delegate.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\icon_delegate.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\icon_delegate.h -o build\moc_icon_delegate.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/icon_delegate.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_icon_delegate.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\launchy\src\icon_extractor.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\icon_extractor.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\icon_extractor.h -o build\moc_icon_extractor.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/icon_extractor.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_icon_extractor.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\icon_extractor.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\icon_extractor.h -o build\moc_icon_extractor.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/icon_extractor.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_icon_extractor.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\launchy\src\main.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\main.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\main.h -o build\moc_main.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/main.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_main.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\main.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\main.h -o build\moc_main.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/main.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_main.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\launchy\platforms\win\minidump.h" />
+    <CustomBuild Include="..\launchy\src\options.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\options.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\options.h -o build\moc_options.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/options.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_options.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\options.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\options.h -o build\moc_options.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/options.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_options.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\launchy\src\platform_base.h" />
+    <ClInclude Include="..\launchy\src\platform_base_hotkey.h" />
+    <CustomBuild Include="..\launchy\src\platform_base_hottrigger.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\platform_base_hottrigger.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\platform_base_hottrigger.h -o build\moc_platform_base_hottrigger.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/src/platform_base_hottrigger.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_platform_base_hottrigger.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\platform_base_hottrigger.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\src\platform_base_hottrigger.h -o build\moc_platform_base_hottrigger.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/src/platform_base_hottrigger.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_platform_base_hottrigger.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\launchy\platforms\win\platform_win.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\platforms\win\platform_win.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\platforms\win\platform_win.h -o build\moc_platform_win.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ../launchy/platforms/win/platform_win.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_platform_win.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\platforms\win\platform_win.h;build\moc_predefs.h;C:\Qt\5.9.2\msvc2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\moc.exe  -DVC_EXTRALEAN -DWIN32 -D_UNICODE -DUNICODE -DWINVER=0x0600 -D_WIN32_WINNT=0x0600 -D_WIN32_WINDOWS=0x0600 -D_WIN32_IE=0x0700 -DQT_WIDGETS_LIB -DQT_WINEXTRAS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include build/moc_predefs.h -IC:/Qt/5.9.2/msvc2017_64/mkspecs/win32-msvc -IC:/src/Launchy/launchy/src -IC:/src/Launchy/launchy/common -IC:/Programs/boost -IC:/Qt/5.9.2/msvc2017_64/include -IC:/Qt/5.9.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.9.2/msvc2017_64/include/QtWinExtras -IC:/Qt/5.9.2/msvc2017_64/include/QtGui -IC:/Qt/5.9.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.9.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.9.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" ..\launchy\platforms\win\platform_win.h -o build\moc_platform_win.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ../launchy/platforms/win/platform_win.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_platform_win.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\launchy\platforms\win\platform_win_util.h" />
+    <ClInclude Include="..\launchy\src\plugin_handler.h" />
+    <ClInclude Include="..\launchy\src\plugin_interface.h" />
+    <CustomBuild Include="..\launchy\src\precompiled.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">echo /*-------------------------------------------------------------------- &gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * the .pch file.&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * create the PCH file directly from the header file.&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * command line compilations by nmake.&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo --------------------------------------------------------------------*/&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo #include "precompiled.h"&gt;&gt;..\launchy\src\precompiled.h.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating precompiled header source file '..\launchy\src\precompiled.h.cpp' ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\precompiled.h.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo /*-------------------------------------------------------------------- &gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * the .pch file.&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * create the PCH file directly from the header file.&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * command line compilations by nmake.&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo --------------------------------------------------------------------*/&gt;&gt;..\launchy\src\precompiled.h.cpp
+if errorlevel 1 goto VCEnd
+echo #include "precompiled.h"&gt;&gt;..\launchy\src\precompiled.h.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating precompiled header source file '..\launchy\src\precompiled.h.cpp' ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\precompiled.h.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="build\moc_CharLineEdit.cpp" />
+    <ClCompile Include="build\moc_CharListWidget.cpp" />
+    <ClCompile Include="build\moc_DropListWidget.cpp" />
+    <ClCompile Include="build\moc_Fader.cpp" />
+    <ClCompile Include="build\moc_FileBrowser.cpp" />
+    <ClCompile Include="build\moc_FileBrowserDelegate.cpp" />
+    <ClCompile Include="build\moc_catalog_builder.cpp" />
+    <ClCompile Include="build\moc_icon_delegate.cpp" />
+    <ClCompile Include="build\moc_icon_extractor.cpp" />
+    <ClCompile Include="build\moc_main.cpp" />
+    <ClCompile Include="build\moc_options.cpp" />
+    <ClCompile Include="build\moc_platform_base_hottrigger.cpp" />
+    <ClCompile Include="build\moc_platform_win.cpp" />
+    <CustomBuild Include="build\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\Qt\5.9.2\msvc2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -BxC:\Qt\5.9.2\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\Qt\5.9.2\msvc2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;build\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_predefs.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\Qt\5.9.2\msvc2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -BxC:\Qt\5.9.2\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\Qt\5.9.2\msvc2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;build\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClCompile Include="..\launchy\src\precompiled.h.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(NOINHERIT)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NOINHERIT)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_launchy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\qrc_launchy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="ui_options.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\launchy\src\options.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\options.ui;C:\Qt\5.9.2\msvc2017_64\bin\uic.exe;DropListWidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\uic.exe ..\launchy\src\options.ui -o ui_options.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC ../launchy/src/options.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_options.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\options.ui;C:\Qt\5.9.2\msvc2017_64\bin\uic.exe;DropListWidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\uic.exe ..\launchy\src\options.ui -o ui_options.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC ../launchy/src/options.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_options.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\launchy\src\resources\about.png" />
+    <None Include="..\launchy\src\resources\advanced.png" />
+    <None Include="..\launchy\src\resources\basicskin.qss" />
+    <None Include="..\launchy\src\resources\catalog.png" />
+    <None Include="..\launchy\src\resources\general.png" />
+    <CustomBuild Include="..\launchy\src\launchy.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\launchy\src\launchy.qrc;C:\Qt\5.9.2\msvc2017_64\bin\rcc.exe;..\launchy\src\resources\skins.png;..\launchy\src\resources\plugins2.png;..\launchy\src\resources\catalog.png;..\launchy\src\resources\advanced.png;..\launchy\src\resources\about.png;..\launchy\src\resources\plugins1.png;..\launchy\src\resources\general.png;..\launchy\src\resources\launchy16.png;..\launchy\src\resources\launchy128.png;..\launchy\src\resources\basicskin.qss;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\5.9.2\msvc2017_64\bin\rcc.exe -name launchy ..\launchy\src\launchy.qrc -o release\qrc_launchy.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RCC ../launchy/src/launchy.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qrc_launchy.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\launchy\src\launchy.qrc;C:\Qt\5.9.2\msvc2017_64\bin\rcc.exe;..\launchy\src\resources\skins.png;..\launchy\src\resources\plugins2.png;..\launchy\src\resources\catalog.png;..\launchy\src\resources\advanced.png;..\launchy\src\resources\about.png;..\launchy\src\resources\plugins1.png;..\launchy\src\resources\general.png;..\launchy\src\resources\launchy16.png;..\launchy\src\resources\launchy128.png;..\launchy\src\resources\basicskin.qss;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\5.9.2\msvc2017_64\bin\rcc.exe -name launchy ..\launchy\src\launchy.qrc -o debug\qrc_launchy.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RCC ../launchy/src/launchy.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qrc_launchy.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="..\launchy\src\resources\launchy128.png" />
+    <None Include="..\launchy\src\resources\launchy16.png" />
+    <None Include="..\launchy\src\resources\plugins1.png" />
+    <None Include="..\launchy\src\resources\plugins2.png" />
+    <None Include="..\launchy\src\resources\skins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\src\Launchy\launchy\win\launchy.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -14,6 +14,7 @@
     <ProjectGuid>{B882A8ED-0C6B-38CE-B21B-25C230D53F8F}</ProjectGuid>
     <RootNamespace>Launchy</RootNamespace>
     <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -23,6 +24,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <IntermediateDirectory>build\</IntermediateDirectory>
     <PrimaryOutput>Launchy</PrimaryOutput>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <OutputDirectory>..\release\</OutputDirectory>
@@ -31,6 +33,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <IntermediateDirectory>build\</IntermediateDirectory>
     <PrimaryOutput>Launchy</PrimaryOutput>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
@@ -54,7 +57,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>e:\QT\4.8.5\include\QtCore;e:\QT\4.8.5\include\QtNetwork;e:\QT\4.8.5\include\QtGui;e:\QT\4.8.5\include;..\common;e:\LIB\boost_1_55_0\;e:\QT\4.8.5\include\ActiveQt;build;.;e:\QT\4.8.5\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Programs\boost;e:\QT\4.8.5\include\QtCore;C:\Qt\5.9.2\msvc2017_64\include;C:\Qt\5.9.2\msvc2017_64\include\QtCore;C:\Qt\5.9.2\msvc2017_64\include\QtNetwork;C:\Qt\5.9.2\msvc2017_64\include\QtGui;e:\QT\4.8.5\include\QtNetwork;e:\QT\4.8.5\include\QtGui;e:\QT\4.8.5\include;..\common;e:\LIB\boost_1_55_0\;e:\QT\4.8.5\include\ActiveQt;build;.;e:\QT\4.8.5\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>build\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -63,7 +66,7 @@
       <ForcedIncludeFiles>precompiled.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ObjectFileName>build\</ObjectFileName>
       <Optimization>Disabled</Optimization>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)\Launchy.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_CONSOLE;VC_EXTRALEAN;WIN32;_UNICODE;UNICODE;WINVER=0x0600;_WIN32_WINNT=0x0600;_WIN32_WINDOWS=0x0600;_WIN32_IE=0x0700;ENABLE_LOG_FILE;QT_DLL;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -98,7 +101,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>e:\QT\4.8.5\include\QtCore;e:\QT\4.8.5\include\QtNetwork;e:\QT\4.8.5\include\QtGui;e:\QT\4.8.5\include;..\common;e:\LIB\boost_1_55_0\;e:\QT\4.8.5\include\ActiveQt;build;.;e:\QT\4.8.5\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Programs\boost;e:\QT\4.8.5\include\QtCore;C:\Qt\5.9.2\msvc2017_64\include;C:\Qt\5.9.2\msvc2017_64\include\QtCore;C:\Qt\5.9.2\msvc2017_64\include\QtNetwork;C:\Qt\5.9.2\msvc2017_64\include\QtGui;e:\QT\4.8.5\include\QtNetwork;e:\QT\4.8.5\include\QtGui;e:\QT\4.8.5\include;..\common;e:\LIB\boost_1_55_0\;e:\QT\4.8.5\include\ActiveQt;build;.;e:\QT\4.8.5\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>build\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -107,7 +110,7 @@
       <ForcedIncludeFiles>precompiled.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <ObjectFileName>build\</ObjectFileName>
       <Optimization>MaxSpeed</Optimization>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)\Launchy.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_WINDOWS;VC_EXTRALEAN;WIN32;_UNICODE;UNICODE;WINVER=0x0600;_WIN32_WINNT=0x0600;_WIN32_WINDOWS=0x0600;_WIN32_IE=0x0700;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -387,27 +390,6 @@ echo #include "precompiled.h"&gt;&gt;precompiled.h.cpp</Command>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="build\launchy.res" />
-    <ClCompile Include="build\moc_CharLineEdit.cpp" />
-    <ClCompile Include="build\moc_CharListWidget.cpp" />
-    <ClCompile Include="build\moc_DropListWidget.cpp" />
-    <ClCompile Include="build\moc_Fader.cpp" />
-    <ClCompile Include="build\moc_FileBrowser.cpp" />
-    <ClCompile Include="build\moc_FileBrowserDelegate.cpp" />
-    <ClCompile Include="build\moc_catalog_builder.cpp" />
-    <ClCompile Include="build\moc_icon_delegate.cpp" />
-    <ClCompile Include="build\moc_icon_extractor.cpp" />
-    <ClCompile Include="build\moc_main.cpp" />
-    <ClCompile Include="build\moc_options.cpp" />
-    <ClCompile Include="build\moc_platform_base_hottrigger.cpp" />
-    <ClCompile Include="build\moc_platform_win.cpp" />
-    <ClCompile Include="precompiled.h.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(NOINHERIT)</ForcedIncludeFiles>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NOINHERIT)</ForcedIncludeFiles>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="debug\qrc_launchy.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
